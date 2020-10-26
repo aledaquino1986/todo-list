@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>To do List</title>
+</head>
+<body>
+  <main>
+    <section class="title">
+      <h1>My todos</h1>
+    </section>
+    
+   <section class="form">
+     <form action="/" class="todo-form">
+      <label for="title">Todo title</label>
+      <input type="text" id="title" name="title" placeholder="Example: cleaning">
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" placeholder="Example: shopping for party">
+      <label for="due-date">Due Date</label>
+      <input type="datetime-local" id="due-date" name="due-date">
+      <label for="priority">Priority</label>
+      <select name="priority" id="priority">
+        <option value="high">High</option>
+        <option value="low">Low</option>
+      </select>
+      <button type="submit" class="add" id="add-button">Add your to do!</button>
+    </form>
+   </section>
+
+   <section class="table-section hidden" >
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Todo</th>
+          <th>Description</th>
+          <th>Due Date</th>
+          <th>Priority</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="todo-list">
+        
+      </tbody>
+    </table>
+   </section>
+    
+  </main>
+</body>
+</html>

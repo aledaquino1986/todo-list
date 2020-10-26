@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, Arial, sans-serif;
+  background: #19011d;
+  color: #fff;
+
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+h1{
+  font-size: 3rem;
+  margin: 0.5rem;
+}
+
+.alert-div {
+  transition: 1s;
+}
+
+.alert{
+  margin: 1rem;
+  text-align: center;
+  color: #fff;
+  
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 1s ease-in-out;
+  padding: 10px;
+}
+
+.error {
+  background-color: rgb(189, 59, 59);
+}
+
+
+.success {
+  
+  background-color: rgb(35, 150, 104);
+
+}
+
+.form {
+  grid-area: form;
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+}
+
+.table-section {
+  grid-area: table;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100vh;
+  grid-area: form;
+}
+
+label {
+  font-size: 2rem;
+}
+
+input, select {
+ 
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+select {
+  text-align-last: center;
+  text-align: center;
+}
+
+.add {
+  margin: 1rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  background: #27022d;
+  background: #a41ee9;
+  color: #fff;
+  letter-spacing: 1.5px;
+  border: 1px solid #000;
+  transition: 0.5s;
+  overflow: hidden;
+  outline: none;
+}
+
+
+.add:hover {
+  color: #a41ee9; 
+  background: #f2f2f2;
+}
+
+.add:active {
+  transform: translateY(5px);
+  box-shadow:0 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+.hidden {
+  visibility: hidden;
+}
+
+
+
+table {
+	margin-bottom: 20px;
+	width: auto;
+	border-collapse: collapse;
+}
+
+
+table thead th {
+	padding: 2rem;
+  background-color: black;
+  font-size: 1.3rem;
+  
+}
+
+
+
+table tbody td {
+	padding: 8px;
+	font-size: large;
+}
+
+tr {
+  text-align: center;
+}
+
+tr:nth-child(even) {background-color: #3b3434;}
+
+tr:nth-child(odd) {background-color: #a41ee9;}
+
+
+.line-through {
+  text-decoration: line-through;
+}
+
+@media only screen and (min-width: 1000px) {
+  .grid-main {
+    display: grid;
+    grid-template-rows: 0.1fr auto;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    grid-template-areas: "title title"
+                         "form table";
+  }
+}
+
