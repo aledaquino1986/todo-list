@@ -127,6 +127,7 @@ class UIcontrol {
       p.innerText = "You have added a todo!";
       domElements.formSection.insertBefore(p, domElements.form);
       p.className = "alert success";
+      
     }
 
     setTimeout(() => document.querySelector(".alert").remove(), 3000);
@@ -218,7 +219,14 @@ domElements.tbody.addEventListener("click", (e) => {
       domElements.main.classList.remove("grid-main");
      }
   } else if (e.target.classList.contains("linethrough")) {
-    e.target.parentElement.className = "line-through"
+    if (e.target.parentElement.classList.contains("line-through")) {
+      e.target.parentElement.classList.remove("line-through")
+    } else {
+      e.target.parentElement.className = "line-through"
+    }
+    
+    
+  // } else if () {
   } else {
     return;
   }

@@ -26,15 +26,12 @@ h1{
   margin: 0.5rem;
 }
 
-.alert-div {
-  transition: 1s;
-}
 
 .alert{
-  margin: 1rem;
+  margin: 0.5rem;
   text-align: center;
   color: #fff;
-  
+  transition: 1s;
   font-size: 2rem;
   font-weight: bold;
   border-radius: 5px;
@@ -55,6 +52,7 @@ h1{
 
 .form {
   grid-area: form;
+  
 }
 
 .title {
@@ -72,6 +70,7 @@ form {
   text-align: center;
   width: 100vh;
   grid-area: form;
+  transition: 0.5s
 }
 
 label {
@@ -123,6 +122,16 @@ select {
   visibility: hidden;
 }
 
+label {
+  margin: 1rem;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+input {
+  border-radius: 8px;
+}
+
 
 
 table {
@@ -157,6 +166,57 @@ tr:nth-child(odd) {background-color: #a41ee9;}
 
 .line-through {
   text-decoration: line-through;
+}
+
+input[type=checkbox] {
+   margin-top: 30px;
+}
+
+.delete-todo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 3px;
+  background-color: rgb(255, 94, 0);
+  outline: none;
+  border-radius: 7px;
+  color: #fff;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+}
+
+.delete-todo:hover {
+
+  color: rgb(255, 94, 0);
+  background-color: #fff;
+  transition: ease-in-out 0.5s;
+}
+
+
+.delete-todo:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+
+@keyframes myAnimation{
+  0%{
+    opacity: 1;
+    transform: rotateX(180deg);
+  }
+  50%{
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  100%{
+    display: none;
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+}
+
+.alert{
+    animation-name: myAnimation;
+    animation-duration: 4000ms;
+    animation-fill-mode: forwards;
 }
 
 @media only screen and (min-width: 1000px) {
